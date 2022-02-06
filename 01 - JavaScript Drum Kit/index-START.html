@@ -58,7 +58,17 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  const keys = document.querySelectorAll('.key');
   const keyListener = document.querySelector('body');
+
+  keyListener.addEventListener('keyup', function (e) {
+
+    for (let i = 0; i < keys.length; i++) {
+      keys[i].classList.remove('playing');
+    }
+
+  });
+
   keyListener.addEventListener('keydown', function (e) {
 
     const sounds = document.querySelectorAll('audio');
@@ -67,46 +77,55 @@
       case 'a':
         sounds[0].currentTime = 0;
         sounds[0].play();
+        keys[0].classList.toggle('playing');
         break;
 
       case 's':
         sounds[1].currentTime = 0;
         sounds[1].play();
+        keys[1].classList.toggle('playing');
         break;
 
       case 'd':
         sounds[2].currentTime = 0;
         sounds[2].play();
+        keys[2].classList.toggle('playing');
         break;
 
       case 'f':
         sounds[3].currentTime = 0;
         sounds[3].play();
+        keys[3].classList.toggle('playing');
         break;
 
       case 'g':
         sounds[4].currentTime = 0;
         sounds[4].play();
+        keys[4].classList.toggle('playing');
         break;
 
       case 'h':
         sounds[5].currentTime = 0;
         sounds[5].play();
+        keys[5].classList.toggle('playing');
         break;
 
       case 'j':
         sounds[6].currentTime = 0;
         sounds[6].play();
+        keys[6].classList.toggle('playing');
         break;
 
       case 'k':
         sounds[7].currentTime = 0;
         sounds[7].play();
+        keys[7].classList.toggle('playing');
         break;
 
       case 'l':
         sounds[8].currentTime = 0;
         sounds[8].play();
+        keys[8].classList.toggle('playing');
         break;
     }
 
