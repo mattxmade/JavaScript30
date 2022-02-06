@@ -58,6 +58,59 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  const keyListener = document.querySelector('body');
+  keyListener.addEventListener('keydown', function (e) {
+
+    const sounds = document.querySelectorAll('audio');
+    
+    switch(e.key.toLowerCase()) {
+      case 'a':
+        sounds[0].currentTime = 0;
+        sounds[0].play();
+        break;
+
+      case 's':
+        sounds[1].currentTime = 0;
+        sounds[1].play();
+        break;
+
+      case 'd':
+        sounds[2].currentTime = 0;
+        sounds[2].play();
+        break;
+
+      case 'f':
+        sounds[3].currentTime = 0;
+        sounds[3].play();
+        break;
+
+      case 'g':
+        sounds[4].currentTime = 0;
+        sounds[4].play();
+        break;
+
+      case 'h':
+        sounds[5].currentTime = 0;
+        sounds[5].play();
+        break;
+
+      case 'j':
+        sounds[6].currentTime = 0;
+        sounds[6].play();
+        break;
+
+      case 'k':
+        sounds[7].currentTime = 0;
+        sounds[7].play();
+        break;
+
+      case 'l':
+        sounds[8].currentTime = 0;
+        sounds[8].play();
+        break;
+    }
+
+  });
 
 </script>
 
